@@ -4,6 +4,7 @@ import {
   getData,
   sendData,
   retrievePosts,
+  addTodo,
 } from './examples/apis/jsonplaceholder';
 import createTimeout from './examples/createpromise/createTimeout';
 
@@ -14,6 +15,13 @@ moviePlanets(2);
 getData();
 sendData();
 retrievePosts(3);
+
+let todo = {
+  completed: false,
+  userId: 1,
+  title: 'Learn Promises',
+};
+addTodo(todo);
 
 createTimeout(2000)
   .then(() => {

@@ -45,7 +45,7 @@ export const moviePlanets = async function (movieNum) {
 
     console.log(movieObj);
 
-    let promises = movieObj.data.residents.map((url) => axios.get(url)); // returns an array of Promises (the returned data is an array)
+    let promises = movieObj.data.residents.map((url) => axios.get(url)); // map() with axios.get() returns an array of Promises (the returned data is an array)
 
     // using *for await of* loops through the array of Promises, waits, and then returns the data from the Promises
     for await (let resident of promises) {
